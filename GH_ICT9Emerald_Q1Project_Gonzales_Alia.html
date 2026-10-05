@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Project</title>
+</head>
+<style>
+
+    body{
+        background-color: beige;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .header{
+        background-color: darkgreen;
+        border-radius: 8px;
+        justify-content: space-between;
+        display: flex;
+        height: 100px;
+        position: sticky;
+        top: 0;
+        text-align: center;
+    }
+
+    .header li{
+        list-style-type: none; 
+        margin: 0;
+        display: flex; 
+        gap: 20px;
+        flex-direction: row;
+        display: inline-block;
+        margin-left: 25px;
+    }
+
+    .header a{
+        color: rgb(233, 255, 178);
+    }
+
+    .logo img{
+        display: flex;
+        max-width: 65px;
+        justify-content: center;
+        margin: 20px;
+        border-radius: 15px;
+    }
+
+    .header-content{
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+
+    .profile{
+        color: rgb(72, 46, 13);
+    }
+
+    .profile-text{
+        text-align: center;
+    }
+
+    .profile-picture img{
+        width: 175px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 20px;
+        margin-top: 15px;
+    }
+
+    .about-container{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .about-title{
+        box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        text-align: center;
+        background-color: darkgreen;
+        color: beige;
+        border-radius: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    .hobbies{
+        margin-right: 75px;
+    }
+
+    .crocheting{
+        box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        background-color: rgb(72, 46, 13);
+        color: beige;
+        padding: 5px;
+        border-radius: 5px;   
+    }
+
+    .writing{
+        box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        background-color: rgb(72, 46, 13);
+        color: beige;
+        padding: 5px;
+        border-radius: 5px; 
+    }
+
+    .baking{
+        box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        background-color: rgb(72, 46, 13);
+        color: beige;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .hello{
+        color: rgb(72, 46, 13);
+    }
+
+    .work-title{
+        box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        text-align: center;
+        background-color: darkgreen;
+        color: beige;
+        border-radius: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .purple-image img{
+        width: 400px;
+        border-radius: 20px;
+        display: flex;
+        vertical-align: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .mico img{
+        text-align: center;
+        width: 400px;
+        border-radius: 20px;
+        margin-top: 40px;
+    }
+
+    .form-title{
+        box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        text-align: center;
+        background-color: darkgreen;
+        color: beige;
+        border-radius: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;        
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .form-background{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    footer{
+        text-align: center;
+        color: rgb(72, 46, 13);
+    }
+
+    form{
+        color: rgb(72, 46, 13);
+    }
+
+    .red-purple{
+        display: flex;
+        vertical-align: center;
+        justify-content: center;
+    }
+
+    .seatwork{
+        display: flex;
+        vertical-align: center;
+        justify-content: center;
+    }
+
+    .aligning{
+        text-align: center;
+        color: rgb(72, 46, 13);
+    }
+
+    fieldset{
+        box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+        text-align: center;
+        margin-left: 200px;
+        margin-right: 200px;
+        background-color: rgb(236, 209, 175);
+    }
+
+</style>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="Logo_Gonzales.png" alt="logo">
+        </div class="logo">
+
+        <div class="header-content">
+            <ul>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#work">My works</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </div class="header-content">
+    </div class="header">
+
+    <!-- HERO -->
+    <div class="profile">
+        <div class="profile-picture">
+            <img src="aliapicture.png" alt="profile">
+        </div class="profile-picture">
+
+        <div class="profile-text">
+            <p>Aspiring Crafter/Web Developer</p>
+        </div class="profile-text">
+    </div class="profile">
+
+    <!-- MAIN -->
+    <!-- ABOUT ME -->
+    <div class="about-container" id="aboutme">
+        <div class="about-title">
+            <h3>About Me</h3>
+        </div class="about-title">
+        <br>
+
+        <div class="hello">
+            <p> I am Alia Gonzales, who is a grade 9 student in OB Montessori Greenhills. I enjoy many hobbies, but my favorites ones are the following:</p>
+        </div class="hello">
+        <br>
+
+        <div class="hobbies">
+            <dl>
+                <!-- CROCHETING -->
+                <div class="crocheting">
+                <dt><strong>Crocheting</strong></dt>
+                <dd>I enjoy crocheting key chains and plusies.</dd>
+                </div>
+                <br>
+
+                <!-- WRITING -->
+                <div class="writing">
+                <dt><strong>Writing</strong></dt>
+                <dd>I enjoy writing short stories that are sad and bittersweet.</dd>
+                </div>
+                <br>
+
+                <!-- BAKING -->
+                <div class="baking">
+                <dt><strong>Baking</strong></dt>
+                <dd>I enjoy baking pastries for my freinds and family.</dd>
+                </div>
+                <br>
+            </dl>
+        </div class="hobbies">
+    </div class="about-container">
+
+    <!-- MY WORKS -->
+    <div class="works" id="work">
+        <div class="work-title">
+            <h3>My Works</h3>
+        </div class="work-title">
+    </div class="works">
+
+    <ol>
+        <!-- Red or Purple -->
+        <div class="red-purple">
+            <br>
+            <li><h4><i>Red or Purple</i></h4></li>
+            
+            <div class="purple-image">
+                <img src="Purple.png" alt="purple">
+            </div class="purple-image">
+        </div class="red-purple">
+
+        <div class="aligning">
+            <p>"Red or Purple" is a story about changing youself to be someone's ideal type.</p>
+            <a href="https://docs.google.com/document/d/1fvQIT-B-2q8RZFRhEM6lbFKCkKFvU9R8pzH26ZWa9gg/edit?tab=t.0">Click here to see the full story.</a>
+        </div class="aligning">
+        <br>
+        <br>
+
+        <!-- Seatwork #1 -->
+        <div class="seatwork">
+            <li><h4><i>ICT Seatwork #1</i></h4></li>
+
+            <div class="mico">
+                <img src="mico.png" alt="seatwork">
+            </div>
+        </div class="seatwork">
+
+        <div class="aligning">
+            <p>This website shows my favorite artist, MICO, and my top songs of the month.</p>
+            <a href="file:///C:/Users/Alia/Documents/ICT%209/Quarter%201/Assessments/GH_ICT9Emerald_Q1Seatwork1_Gonzales_Alia.html">Click here to see the full website.</a>
+        </div>
+    </ol>
+
+    <!-- FORM -->
+    <div class="form" id="contact">
+        <div class="form-title">
+            <h3>Contact Me</h3>
+        </div class="form-title">
+
+        <div class="form-background">
+            <form>
+                <fieldset>
+                    <legend><h3>Fill in your information</h3></legend>
+                <!-- NAME -->
+                 <h4>Your name:</h4>
+                 <input type="text" name="Your name" placeholder="Enter your full name...">
+
+                <!-- EMAIL -->
+                <h4>Your Email:</h4>
+                <input type="email" name="Your email" placeholder="Enter your email...">
+
+                <!-- HOW TO FIND ME -->
+                    <h4>How did you find me?</h4>
+                    <br>
+
+                    <!-- FACEBOOK -->
+                    <input type="radio" name="contact">
+                    <label for="contact">Facebook</label>
+                    <br>
+
+                    <!-- GOOGLE -->
+                    <input type="radio" name="contact">
+                    <label for="contact">Google</label>
+                    <br>
+
+                    <!-- FRIENDS -->
+                    <input type="radio" name="contact">
+                    <label for="contact">Friends</label>
+
+                <!-- INTERESTS -->
+                <!-- WEB -->
+                <h5>Interested in:</h5>
+                <input type="checkbox" name="interest">
+                <label for="interest">Web design</label>
+                <br>
+                
+                <!-- GRAPHIC -->
+                <input type="checkbox" name="interest">
+                <label for="interest">Graphic Design</label>
+                <br>
+                
+                <!-- ROBOTICS -->
+                <input type="checkbox" name="interest">
+                <label for="interest">Robotics</label>
+            
+                <!-- RATE ME -->
+                <h5>Rate my portfolio</h5>
+                <select>
+                    <option value="1">Select Rating</option>
+                    <option value="2">Needs Imporvement</option>
+                    <option value="3">Below Average</option>
+                    <option value="4">Average</option>
+                    <option value="5">Above Average</option>
+                    <option value="6">Excellent</option>
+                </select>
+
+            <!-- FEEDBACK -->
+           <div class="feedback">
+               <h5>Any Feedback?</h5>
+               <textarea placeholder="Enter your feedback..."></textarea>
+           </div>
+           
+            <!-- SUBMIT -->
+                <button type="submit">
+                    <p>Submit</p>
+                </button>
+            </fieldset>
+            </form>
+        </div class="form-background">
+    </div class="form">
+
+    <br>
+    <br>
+
+    <!-- Footer -->
+   <div class="footer">
+       <footer>© 2026 | Alia Gonzales | Q1 Project | 9-Emerald</footer>
+   </div class="footer">
+
+</body>
+</html>
